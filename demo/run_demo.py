@@ -139,7 +139,7 @@ def demo_guardrails() -> None:
 
     adv = pd.read_csv(ROOT / "phase-c" / "adversarial_test_results.csv")
     rate = adv["blocked"].mean()
-    print(f"\n{BOLD}Overall adversarial detection rate:{RESET} {GREEN}{rate:.0%}{RESET} ({adv['blocked'].sum()}/20)")
+    print(f"\n{BOLD}Overall adversarial detection rate:{RESET} {GREEN}{rate:.0%}{RESET} ({int(adv['blocked'].sum())}/20)")
 
     print(f"\n{BOLD}PII Redaction demo:{RESET}")
     pii_samples = [

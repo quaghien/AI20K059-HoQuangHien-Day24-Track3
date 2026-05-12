@@ -47,10 +47,10 @@ pytest
 - Position bias: A thắng 33% ở run1, giảm xuống 16.7% sau swap-and-average.
 
 ### Phase C (Guardrails Stack)
-- PII detection rate: 9/10 = 90% (latency P95 < 5ms — pure regex, không cần API)
+- PII detection rate: 10/10 = 100% (latency P95 < 5ms — pure regex, không cần API)
 - Topic validator: keyword-based, từ chối gracefully với thông báo hướng dẫn
-- Adversarial defense: 19/20 = 95% detection rate (DAN, roleplay, split, encoding, indirect)
-- Output guard (LlamaGuard-style): 9/10 unsafe detected, 0/10 false positive trên safe outputs
+- Adversarial defense: 20/20 = 100% detection rate (DAN, roleplay, split, encoding, indirect)
+- Output guard (LlamaGuard-style): 10/10 unsafe detected, 0/10 false positive trên safe outputs
 - Latency benchmark (100 queries): L1 P95 < 50ms ✓, L3 P95 < 100ms ✓
 - Xem `phase-c/latency_benchmark.csv` và `phase-c/output_guard_results.csv`
 
