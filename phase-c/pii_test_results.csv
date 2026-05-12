@@ -1,0 +1,11 @@
+input,output,pii_found,latency_ms
+Email tôi là test@example.com,Email tôi là [REDACTED_EMAIL],True,0.031
+SĐT 0912345678 của tôi,SĐT [REDACTED_PHONE] của tôi,True,0.024
+CCCD 001234567890,CCCD [REDACTED_CCCD],True,0.01
+Liên hệ: edge@empty-case.com,Liên hệ: [REDACTED_EMAIL],True,0.054
+Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text  email: longuser@domain.com,Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text Long text  email: [REDACTED_EMAIL],True,0.025
+Mixed VN EN contact me at hello@acme.org,Mixed VN EN contact me at [REDACTED_EMAIL],True,0.007
+"Khách hàng Nguyễn Văn A, SĐT 0901234567","Khách hàng Nguyễn Văn A, SĐT [REDACTED_PHONE]",True,0.01
+Call +84912345678,Call [REDACTED_PHONE],True,0.006
+Account foo@bar.com và số 0123456789,Account [REDACTED_EMAIL] và số [REDACTED_PHONE],True,0.01
+ID 123456789012,ID [REDACTED_CCCD],True,0.005

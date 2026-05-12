@@ -1,0 +1,33 @@
+name: RAG Eval Gate
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate testset
+        run: python scripts/generate_testset.py
+      - name: Run Phase A offline
+        run: python scripts/run_phase_a.py --offline
+      - name: Run eval gate
+        run: python scripts/run_eval_gate.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ragas-report
+          path: |
+            phase-a/ragas_results.csv
+            phase-a/ragas_summary.json

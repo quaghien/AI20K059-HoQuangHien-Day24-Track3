@@ -1,0 +1,11 @@
+question_id,human_winner,confidence,notes
+1,A,high,A trả lời đúng vào câu hỏi về Nghị định; B dài hơn nhưng có phần lạc đề
+2,B,high,B trích dẫn điều khoản cụ thể hơn A; A chỉ nêu khái niệm chung
+3,tie,medium,Cả hai đều đúng nhưng diễn đạt khác nhau; không phân biệt được winner
+4,A,high,A ngắn gọn và chính xác hơn; B dài nhưng thêm thông tin không cần thiết
+5,B,high,B liệt kê đầy đủ các nhóm dữ liệu cá nhân cơ bản; A bỏ sót 1 nhóm
+6,tie,medium,Hai câu trả lời tương đương về nội dung và độ chính xác
+7,A,high,A bám sát context tốt hơn; B có vẻ tự suy diễn thêm ngoài văn bản
+8,B,high,B có cấu trúc rõ ràng hơn và dễ hiểu hơn A trong cùng nội dung
+9,tie,low,Cả hai đều lặp lại cùng một thông tin từ document; chất lượng ngang nhau
+10,A,high,A chính xác hơn về định nghĩa pháp lý; B có lỗi nhỏ về thuật ngữ
