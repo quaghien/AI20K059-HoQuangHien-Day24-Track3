@@ -17,7 +17,7 @@ EMAIL_RE = re.compile(r"\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}\b")
 CCCD_RE = re.compile(r"(?<!\d)\d{12}(?!\d)")
 
 INJECTION_PATTERNS = [
-    re.compile(r"\b(ignore|bypass|override)\b.{0,80}\b(instructions?|rules?|polici?es?|guidelines?)\b", re.I),
+    re.compile(r"\b(ignore|bypass|override)\b.{0,80}\b(instructions?|rules?|polic(?:y|ies)|guidelines?)\b", re.I),
     re.compile(r"\bpretend you (are|are an|are a)\b", re.I),
     re.compile(r"\bpretend you.re\b", re.I),
     re.compile(r"\bfrom now on\b", re.I),
